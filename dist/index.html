@@ -814,6 +814,31 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/theme.js"></script>
+  <script>
+    // Import the functions you need from the SDKs you need
+    import {
+      initializeApp
+    } from "firebase/app";
+    import {
+      getAnalytics
+    } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBDpozpbrz1aBhIHnQ5HDPp_G1dxXUrxOU",
+      authDomain: "bit-and-byte-be17c.firebaseapp.com",
+      projectId: "bit-and-byte-be17c",
+      storageBucket: "bit-and-byte-be17c.appspot.com",
+      messagingSenderId: "1036247394439",
+      appId: "1:1036247394439:web:057467ef6d333ca49a7022",
+      measurementId: "G-65GQ0QGHHP"
+    };
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 
 </html>
