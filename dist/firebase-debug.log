@@ -1,0 +1,43 @@
+[debug] [2022-06-16T05:58:29.453Z] ----------------------------------------------------------------------
+[debug] [2022-06-16T05:58:29.454Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2022-06-16T05:58:29.454Z] CLI Version:   11.1.0
+[debug] [2022-06-16T05:58:29.455Z] Platform:      linux
+[debug] [2022-06-16T05:58:29.455Z] Node Version:  v17.2.0
+[debug] [2022-06-16T05:58:29.455Z] Time:          Wed Jun 15 2022 22:58:29 GMT-0700 (Pacific Daylight Time)
+[debug] [2022-06-16T05:58:29.455Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-16T05:58:29.497Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-16T05:58:29.497Z] > authorizing via signed-in user (bitandbyte.shop@gmail.com)
+[debug] [2022-06-16T05:58:29.497Z] [iam] checking project bit-and-byte for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-16T05:58:29.501Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/bit-and-byte:testIamPermissions [none]
+[debug] [2022-06-16T05:58:29.501Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bit-and-byte:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-16T05:58:29.810Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/bit-and-byte:testIamPermissions 200
+[debug] [2022-06-16T05:58:29.810Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/bit-and-byte:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-16T05:58:29.811Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bit-and-byte [none]
+[debug] [2022-06-16T05:58:30.183Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bit-and-byte 200
+[debug] [2022-06-16T05:58:30.183Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bit-and-byte {"projectId":"bit-and-byte","projectNumber":"391717998011","displayName":"Bit-And-Byte","name":"projects/bit-and-byte","resources":{"hostingSite":"bit-and-byte"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'bit-and-byte'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-06-16T05:58:30.185Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bit-and-byte [none]
+[debug] [2022-06-16T05:58:30.550Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bit-and-byte 200
+[debug] [2022-06-16T05:58:30.550Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bit-and-byte {"projectId":"bit-and-byte","projectNumber":"391717998011","displayName":"Bit-And-Byte","name":"projects/bit-and-byte","resources":{"hostingSite":"bit-and-byte"},"state":"ACTIVE"}
+[debug] [2022-06-16T05:58:30.551Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/391717998011/sites/bit-and-byte/versions [none]
+[debug] [2022-06-16T05:58:30.551Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/391717998011/sites/bit-and-byte/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-06-16T05:58:31.167Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/391717998011/sites/bit-and-byte/versions 500
+[debug] [2022-06-16T05:58:31.167Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/391717998011/sites/bit-and-byte/versions {"error":{"code":500,"message":"Internal error encountered.","status":"INTERNAL"}}
+[error] 
+[error] Error: HTTP Error: 500, Internal error encountered.
+[debug] [2022-06-16T05:58:31.169Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "Internal error encountered.",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500
+  }
+}
